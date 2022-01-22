@@ -8,7 +8,7 @@ struct LNode{
     int Last;
 };
 
-// åˆå§‹åŒ–
+// ³õÊ¼»¯
 List MakeEmpty(){
     List PtrL;
     PtrL=(List)malloc(sizeof(struct LNode));
@@ -16,7 +16,7 @@ List MakeEmpty(){
     return PtrL;
 }
 
-// è¾“å‡ºçº¿æ€§è¡¨ä¸­çš„å…ƒç´ 
+// Êä³öÏßĞÔ±íÖĞµÄÔªËØ
 void display(List t){
     for(int i=0;i<=t->Last;i++){
         printf("%d ",t->Data[i]);
@@ -24,18 +24,18 @@ void display(List t){
     printf("\n");
 }
 
-// æŸ¥æ‰¾å‡½æ•°
-int Find(List t,int elem){  // elem ä¸ºè¦æŸ¥æ‰¾çš„å…ƒç´ 
+// ²éÕÒº¯Êı
+int Find(List t,int elem){  // elem ÎªÒª²éÕÒµÄÔªËØ
     int i=0;
     while(i<=t->Last && t->Data[i] != elem){
         i++;
     }
-    if(i>t->Last) return -1; // -1ä»£è¡¨æ²¡æœ‰æ‰¾åˆ°
+    if(i>t->Last) return -1; // -1´ú±íÃ»ÓĞÕÒµ½
     else return i+1;
 }
 
-// æ’å…¥å…ƒç´ 
-void Insert(List t,int add,int elem){ //add ä¸ºæ’å…¥ä½ç½®ï¼Œelemä¸ºæ’å…¥å…ƒç´ 
+// ²åÈëÔªËØ
+void Insert(List t,int add,int elem){ //add Îª²åÈëÎ»ÖÃ£¬elemÎª²åÈëÔªËØ
     for(int i=t->Last;i>add-1;i--){
         t->Data[i+1]=t->Data[i];
     }
@@ -43,22 +43,22 @@ void Insert(List t,int add,int elem){ //add ä¸ºæ’å…¥ä½ç½®ï¼Œelemä¸ºæ’å…¥å…ƒç´
     t->Last++;
 }
 
-// åˆ é™¤å…ƒç´   
-void Delete(List t,int add){  // add ä¸ºåˆ é™¤å…ƒç´ ä½ç½®
+// É¾³ıÔªËØ  
+void Delete(List t,int add){  // add ÎªÉ¾³ıÔªËØÎ»ÖÃ
     for(int i=add-1;i<t->Last;i++){
         t->Data[i]=t->Data[i+1];
     }
     t->Last--;
 }
 
-// æ›´æ”¹å…ƒç´ 
+// ¸ü¸ÄÔªËØ
 void change(List t,int elem,int new_elem){
     int i_add=Find(t,elem);
     t->Data[i_add-1]=new_elem;
 }
 
 int main(void){
-    // åˆå§‹åŒ–çº¿æ€§è¡¨
+    // ³õÊ¼»¯ÏßĞÔ±í
     List PtrL=MakeEmpty();
     for(int i=0;i<MAXSIZE-3;i++){
         PtrL->Data[i]=i;
@@ -66,19 +66,19 @@ int main(void){
     }
     display(PtrL);
 
-    // æŸ¥æ‰¾å…ƒç´ 
+    // ²éÕÒÔªËØ
     int soulation=Find(PtrL,5);
-    printf("5çš„ä½ç½®æ˜¯%d\n",soulation);
+    printf("5µÄÎ»ÖÃÊÇ%d\n",soulation);
 
-    // æ·»åŠ å…ƒç´ 
+    // Ìí¼ÓÔªËØ
     Insert(PtrL,6,100);
     display(PtrL);
 
-    // åˆ é™¤å…ƒç´ 
+    // É¾³ıÔªËØ
     Delete(PtrL,10);
     display(PtrL);
 
-    // æ›´æ”¹å…ƒç´ 
+    // ¸ü¸ÄÔªËØ
     change(PtrL,12,2000);
     display(PtrL);
 
