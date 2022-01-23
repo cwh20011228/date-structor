@@ -15,11 +15,11 @@ int count(T *num, T _value, int length) // 通过指针传参
 }
 
 template <class T, int N = 20>
-int count(T (&num)[N], T _value) // 通过引用传参
+int count(T (&num)[N], T _value) // 通过引用传参     引用数组传参格式：type (&数组名) [数组大小]
 {
     int count_num = 0;
-    int length = sizeof(num) / sizeof(num[0]);
-    for (int i = 0; i < length; i++)
+    //int length = sizeof(num) / sizeof(num[0]);
+    for (int i = 0; i < N; i++)
     {
         if (num[i] == _value)
             count_num++;
