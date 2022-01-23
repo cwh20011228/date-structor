@@ -1,5 +1,6 @@
 // ps: 这里只做了指针传参的形式，
 // 引用传参还没有做出来
+// 思路： 用vector 容器
 #include <iostream>
 using namespace std;
 
