@@ -18,23 +18,23 @@ void delete1dArray(T *&x)
 
 int main(void)
 {
-    int *x;           // 定义一个指针
+    int *array;       // 定义一个指针
     int numberOfRows; // 数组长度
     cout << "一维数组的长度为：";
     cin >> numberOfRows;
 
     try
     {
-        make1dArray(x, numberOfRows); // 把可能出现的异常放在try块中
+        make1dArray(array, numberOfRows); // 把可能出现的异常放在try块中
     }
 
     catch (bad_alloc e)
-    { // 操作符new 分配内存失败， 返回一个类型为 bad_alloc 的异常，
-        cerr << "Out of Merroy" << endl;
-        exit(1); // 非正常运行导致程序退出
+    {                                    // 操作符new 分配内存失败， 返回一个类型为 bad_alloc 的异常，
+        cerr << "Out of Merroy" << endl; // cerr对应标准错误流，用于显示错误消息。写到cerr的数据是不缓冲的
+        exit(1);                         // 非正常运行导致程序退出
     }
 
-    delete1dArray(x); // 调用释放数组内存的函数
+    delete1dArray(array); // 调用释放数组内存的函数
 
     return 0;
 }
