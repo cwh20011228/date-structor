@@ -6,17 +6,17 @@ enum signType
     plus,
     minus,
 };
-//enum Colour{red,blue,yellow};
+// enum Colour{red,blue,yellow};
 
 class currency
 {
 public:
     // 构造函数
     currency(signType theSign = signType::plus,
-            unsigned long theDollars = 0,
-            unsigned int theCents = 0);
+             unsigned long theDollars = 0,
+             unsigned int theCents = 0);
     // 析构函数
-    ~currency(){ };
+    ~currency(){};
     void setValue(signType, unsigned long, unsigned int);
     void setValue(double);
     signType getSign() const { return sign; }

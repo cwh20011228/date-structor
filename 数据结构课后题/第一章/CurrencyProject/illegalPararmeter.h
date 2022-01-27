@@ -9,7 +9,7 @@ class illegalParameterValue
 {
 public:
     illegalParameterValue() : message("Illegal pararmeter value") {}
-    illegalParameterValue(const char* theMessage)
+    illegalParameterValue(const char *theMessage)
     {
         message = theMessage;
     }
@@ -19,4 +19,4 @@ private:
     string message;
 };
 
-#endif 
+#endif

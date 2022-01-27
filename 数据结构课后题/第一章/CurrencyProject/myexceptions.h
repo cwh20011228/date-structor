@@ -66,7 +66,7 @@ class matrixSizeMismatch
 {
 public:
     matrixSizeMismatch(string theMessage =
-                        "The size of the two matrics doesn't match")
+                           "The size of the two matrics doesn't match")
     {
         message = theMessage;
     }
@@ -81,7 +81,7 @@ class stackEmpty
 {
 public:
     stackEmpty(string theMessage =
-                "Invalid operation on empty stack")
+                   "Invalid operation on empty stack")
     {
         message = theMessage;
     }
@@ -96,7 +96,7 @@ class queueEmpty
 {
 public:
     queueEmpty(string theMessage =
-                "Invalid operation on empty queue")
+                   "Invalid operation on empty queue")
     {
         message = theMessage;
     }
@@ -111,7 +111,7 @@ class hashTableFull
 {
 public:
     hashTableFull(string theMessage =
-                    "The hash table is full")
+                      "The hash table is full")
     {
         message = theMessage;
     }
@@ -150,6 +150,5 @@ public:
 private:
     string message;
 };
-
 
 #endif

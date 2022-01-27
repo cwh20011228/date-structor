@@ -31,21 +31,23 @@ int main(void)
     // 调用成员函数 increment 和 add
     j = i.increment(g).add(h);
     h.output();
-    cout<<" + ";
+    cout << " + ";
     g.output();
-    cout<<" + ";
+    cout << " + ";
     i.output();
-    cout<<" = ";
+    cout << " = ";
     j.output();
-    cout<<endl;
+    cout << endl;
 
     // 测试异常
-    cout<<"Attempting to initialize with cents = 152"<<endl;
-    try{
-        i.setValue(signType::plus,3,152);
+    cout << "Attempting to initialize with cents = 152" << endl;
+    try
+    {
+        i.setValue(signType::plus, 3, 152);
     }
-    catch(illegalParameterValue e){
-        cout<<"Caught thrown exception"<<endl;
+    catch (illegalParameterValue e)
+    {
+        cout << "Caught thrown exception" << endl;
         e.outputMessage();
     }
 
