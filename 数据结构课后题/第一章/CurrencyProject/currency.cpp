@@ -1,5 +1,5 @@
-#include "currency.h"
-
+//#include "currency.h" 
+#include "NewCurrency.h"   // 提高运行速度
 int main(void)
 {
     currency g, h(signType::plus, 3, 50), i, j;
