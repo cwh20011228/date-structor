@@ -1,4 +1,5 @@
-#include "currencyOverload.h"
+//#include "currencyOverload.h"
+#include "currencyOverload_friend.h"
 
 int main(void)
 {
