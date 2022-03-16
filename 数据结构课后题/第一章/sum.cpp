@@ -1,7 +1,9 @@
 #include <iostream>
+#include <numeric>  //  STL 算法 accumulate 的头文件
 using std::cin;
 using std::cout;
 using std::endl;
+using std::accumulate;  
 
 // 普通函数
 template <class T>
@@ -24,6 +26,14 @@ T rsum(T a[], int n)
     return 0;
 }
 
+// STL 算法 accumulate 
+template <class T>
+T STL_sum(T a[],int n)  
+{ // 返回数组 a[0:n-1] 的累计和
+    T theSum = 0;
+    return accumulate(a,a+n,theSum);   // 算法accumulate 返回值是  theSum + SUM(a[0:n-1])
+}
+
 int main(void)
 {
     int length;
@@ -36,6 +46,7 @@ int main(void)
     }
     cout << "(递归函数)数组num[0:length]的和为" << rsum(num, length) << endl;
     cout << "(普通函数)数组num[0:length]的和为" << rsum(num, length) << endl;
+    cout << "(STL算法accumate)数组num[0:length]的和为" << STL_sum(num, length) << endl;
     delete[] num;
     num = nullptr;
 
