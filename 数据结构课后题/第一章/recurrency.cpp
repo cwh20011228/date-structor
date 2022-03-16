@@ -4,7 +4,7 @@ using std::cout;
 using std::endl;
 
 int factorial(int n)
-{ // ¼ÆËã n! µÄÖµ
+{ // è®¡ç®— n! çš„å€¼
     if (n <= 1)
         return 1;
     else
