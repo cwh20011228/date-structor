@@ -30,3 +30,13 @@ int main(void)
 
     return 0;
 }
+
+/*
+*   template<class _InIt, class _Ty> inline _Ty std::accumulate(_InIt _First, _InIt _Last, _Ty _Val)
+*   _InIt _First 指向数组首元素 
+*   _InIt _Last 指向数组尾元素的下一个位置
+*   累计求和的元素范围是 [_InIt _First,_InIt _Last)
+*   accumulate(a, a + n, theProduct, multiplies<T>())
+*   a是一个一维数组， 返回值 theProduct*a[0]*a[1]*...*a[n] 
+*   multiples 计算数组元素的乘积
+*/
